@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scissor | URL Shortening Solution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Urbanist is the closest free match to the Gilroy-style face used in the design -->
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/>
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <header class="site-header">
+      <a class="logo" href="#hero" aria-label="Scissor home">
+        <svg class="logo__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M13.5 19.5 10 23a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0"/>
+          <path d="M18.5 12.5 22 9a4.2 4.2 0 0 1 6 6l-5 5a4.2 4.2 0 0 1-6 0"/>
+          <path d="M5 27 27 5"/>
+        </svg>
+        <span class="logo__divider" aria-hidden="true"></span>
+        <span class="logo__word">SCISSOR</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#hero" class="nav__link is-active">My URLs</a>
+        <button class="nav__link nav__link--drop" type="button" aria-haspopup="true">
+          Features
+          <svg class="nav__chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+        </button>
+        <a href="#pricing" class="nav__link">Pricing</a>
+        <a href="#why" class="nav__link">Analytics</a>
+        <a href="#trim" class="nav__link">FAQs</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#trim" class="link-btn">Log in</a>
+        <a href="#trim" class="btn btn--primary btn--sm">Try for free</a>
+      </div>
+    </header>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="hero__line">Optimize Your Online Experience with Our</span>
+        <span class="hero__line">Advanced
+          <span class="hero__accent">URL Shortening
+            <svg class="hero__swoosh" viewBox="0 0 160 14" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M2 10 C 40 4, 100 4, 158 2" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          Solution</span>
+      </h1>
+
+      <p class="hero__lead">
+        Personalize your shortened URLs to align with your brand identity. Utilize custom slugs,
+        branded links, and domain customization options to reinforce your brand presence and
+        enhance user engagement.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#trim" class="btn btn--primary">Sign Up</a>
+        <a href="#why" class="link-btn">Learn more</a>
+      </div>
+
+      <figure class="demo-card">
+        <svg class="demo-card__art" viewBox="0 0 360 44" role="img" aria-label="Three joined chain links becoming a single short link">
+          <g fill="none" stroke="#141414" stroke-width="2">
+            <rect x="2"   y="6" width="82" height="32" rx="16"/>
+            <rect x="68"  y="6" width="82" height="32" rx="16"/>
+            <rect x="134" y="6" width="82" height="32" rx="16"/>
+            <path d="M22 22h22M88 22h22M154 22h22" stroke-linecap="round"/>
+            <rect x="278" y="6" width="80" height="32" rx="16"/>
+            <path d="M298 22h22" stroke-linecap="round"/>
+          </g>
+          <!-- joints: hide the inner overlap so links look interlocked -->
+          <g fill="none" stroke="#0065fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M232 22h28"/><path d="M254 16l7 6-7 6"/>
+          </g>
+        </svg>
+        <figcaption class="demo-card__text">
+          Seamlessly transform your long URLs into <strong>concise</strong><br>
+          and <strong>shareable links</strong> with just few clicks.
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- decorative platform under the card -->
+    <div class="hero__stage" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ================= PRICING (table) ================= -->
+  <section class="pricing" id="pricing">
+    <div class="section-head">
+      <h2 class="title title--bar">A <span class="accent">price perfect</span> for your needs.</h2>
+      <p>From catering for your personal, business, event, socials needs, you can be rest assured we have you in mind in our pricing.</p>
+    </div>
+
+    <div class="plans-wrap">
+      <table class="plans">
+        <caption class="sr-only">Scissor pricing plans and what each plan includes</caption>
+        <colgroup>
+          <col class="plans__col"><col class="plans__col plans__col--mid"><col class="plans__col">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col" class="plan-name">Basic</th>
+            <th scope="col" class="plan-name featured featured--top">Professional</th>
+            <th scope="col" class="plan-name">Teams</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="plan-price">
+            <td>Free</td>
+            <td class="featured">$15<span>/month</span></td>
+            <td>$25<span>/month</span></td>
+          </tr>
+          <tr class="plan-tag">
+            <td>Free plan for all users</td>
+            <td class="featured">Ideal for business creators</td>
+            <td>Share with up to 10 users</td>
+          </tr>
+          <tr class="plan-feature">
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited URL Shortening</td>
+            <td class="featured"><svg aria-hidden="true"><use href="#i-check"/></svg>Enhanced Link Analytics</td>
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Team Collaboration</td>
+          </tr>
+          <tr class="plan-feature">
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Basic Link Analytics</td>
+            <td class="featured"><svg aria-hidden="true"><use href="#i-check"/></svg>Custom Branded Domains</td>
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>User Roles and Permissions</td>
+          </tr>
+          <tr class="plan-feature">
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Customizable Short Links</td>
+            <td class="featured"><svg aria-hidden="true"><use href="#i-check"/></svg>Advanced Link Customization</td>
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Enhanced Security</td>
+          </tr>
+          <tr class="plan-feature">
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Standard Support</td>
+            <td class="featured"><svg aria-hidden="true"><use href="#i-check"/></svg>Priority Support</td>
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>API Access</td>
+          </tr>
+          <tr class="plan-feature plan-feature--last">
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Ad-supported</td>
+            <td class="featured featured--bottom"><svg aria-hidden="true"><use href="#i-check"/></svg>Ad-free Experience</td>
+            <td><svg aria-hidden="true"><use href="#i-check"/></svg>Dedicated Account Manager</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pricing__actions">
+      <a href="#trim" class="btn btn--outline">Get Custom Pricing</a>
+      <a href="#trim" class="btn btn--primary">Select Pricing</a>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats" aria-label="Scissor in numbers">
+    <div class="stats__inner">
+      <h2 class="title">One Stop.<br>Four <span class="accent">Possibilities</span>.</h2>
+      <table class="stats__table">
+        <caption class="sr-only">Scissor usage figures</caption>
+        <tbody>
+          <tr class="stat-values">
+            <th scope="col">3M</th><th scope="col">60M</th><th scope="col">1B</th><th scope="col">300k</th>
+          </tr>
+          <tr class="stat-labels">
+            <td>Active users</td><td>Links &amp; QR codes created</td><td>Clicked &amp; Scanned connections</td><td>App Integrations</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE ================= -->
+  <section class="why" id="why">
+    <div class="why__intro">
+      <h2 class="title title--bar">Why choose <span class="accent">Scissors</span></h2>
+      <p>Scissors is the hub of everything that has to do with your link management. We shorten your URLs, allow you creating custom ones for your personal, business, event usage. Our swift QR code creation, management and usage tracking with advance analytics for all of these is second to none.</p>
+    </div>
+
+    <article class="feature">
+      <span class="feature__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><path d="M8 12h8"/></svg>
+      </span>
+      <h3>URL Shortening</h3>
+      <p>Scissor allows you to shorten URLs of your business, events. Shorten your URL at scale, URL redirects.</p>
+    </article>
+
+    <article class="feature">
+      <span class="feature__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg>
+      </span>
+      <h3>Custom URLs</h3>
+      <p>With Scissor, you can create custom URLs, with the length you want! A solution for socials and businesses.</p>
+    </article>
+
+    <article class="feature">
+      <span class="feature__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      </span>
+      <h3>QR Codes</h3>
+      <p>Generate QR codes to your business, events. Bring your audience and customers to your doorstep with this scan and go solution.</p>
+    </article>
+
+    <article class="feature">
+      <span class="feature__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+      </span>
+      <h3>Data Analytics</h3>
+      <p>Receive data on the usage of either your shortened URL, custom URLs or generated QR codes. Embedded to monitor progress.</p>
+    </article>
+  </section>
+
+  <!-- ================= TRIM URL FORM ================= -->
+  <section class="trim" id="trim">
+    <svg class="trim__bg" viewBox="0 0 1440 523" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="g-left" x1="0.1" y1="0" x2="0.9" y2="1">
+          <stop offset="0" stop-color="#2c5568"/>
+          <stop offset="0.55" stop-color="#2f566b"/>
+          <stop offset="1" stop-color="#2b4f66"/>
+        </linearGradient>
+        <linearGradient id="g-top" x1="0" y1="0.2" x2="1" y2="0.6">
+          <stop offset="0" stop-color="#2a5f78" stop-opacity="0"/>
+          <stop offset="1" stop-color="#1f4f86"/>
+        </linearGradient>
+        <linearGradient id="g-right" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#3a5d70"/>
+          <stop offset="1" stop-color="#27465b"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="523" fill="#1d3347"/>
+      <!-- big blob, top left -->
+      <path d="M0 20 C 120 -10, 330 30, 420 0 L 523 0 C 520 60, 470 100, 420 150 C 360 210, 340 300, 345 523 L 280 523 C 250 470, 210 400, 150 330 C 110 285, 40 250, 0 200 Z" fill="url(#g-left)"/>
+      <path d="M300 0 L 523 0 C 520 60, 470 100, 420 150 C 360 210, 340 300, 345 523 L 275 523 C 285 360, 300 200, 340 90 C 350 50, 330 20, 300 0 Z" fill="url(#g-top)" opacity=".85"/>
+      <!-- lower left shape -->
+      <path d="M0 395 C 60 420, 130 440, 175 480 C 205 505, 215 515, 220 523 L 0 523 Z" fill="#25455a"/>
+      <!-- bottom right blob -->
+      <path d="M1440 275 C 1380 290, 1330 268, 1290 250 C 1230 225, 1160 260, 1120 330 C 1070 410, 1030 470, 1018 523 L 1440 523 Z" fill="url(#g-right)"/>
+      <path d="M1440 400 C 1360 400, 1260 440, 1200 523 L 1440 523 Z" fill="#3a5f72" opacity=".7"/>
+    </svg>
+
+    <form class="trim__card" action="#" method="post" novalidate>
+      <label class="sr-only" for="url">Paste URL</label>
+      <input class="field field--url" id="url" name="url" type="url" placeholder="Paste URL here...">
+
+      <div class="trim__row">
+        <label class="sr-only" for="domain">Choose domain</label>
+        <div class="field field--select">
+          <select id="domain" name="domain" required>
+            <option value="" selected disabled>Choose Domain</option>
+            <option>scissor.ly</option>
+            <option>trim.link</option>
+            <option>snip.to</option>
+          </select>
+          <svg aria-hidden="true"><use href="#i-chevron"/></svg>
+        </div>
+        <label class="sr-only" for="alias">Alias</label>
+        <input class="field field--alias" id="alias" name="alias" type="text" placeholder="Type Alias here">
+      </div>
+
+      <button class="btn btn--primary btn--block" type="submit">
+        Trim URL
+        <svg class="wand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 20 15 9"/><path d="m14 4 1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/><path d="M19 12l.6 1.2 1.2.6-1.2.6L19 15.6l-.6-1.2-1.2-.6 1.2-.6z"/>
+        </svg>
+      </button>
+
+      <p class="trim__terms">By clicking TrimURL, I agree to the <a href="#">Terms of Service,</a> <a href="#">Privacy Policy</a> and Use of Cookies.</p>
+    </form>
+  </section>
+
+</body>
+</html>
